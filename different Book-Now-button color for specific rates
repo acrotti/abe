@@ -1,0 +1,15 @@
+/*
+CSS file
+Replace the rate code (S1E) with the code the new coloring should be applied to;
+Replace the color codes
+*/
+
+.form-inline.prevent-double-submit[action*='S1E'] .btn-primary {
+	background-color: #ffa726;
+	border-color: #ffa726;
+}
+
+.form-inline.prevent-double-submit[action*='S1E'] .btn-primary:hover {
+	background-color: #ff9d0c;
+	border-color: #ff9d0c;
+}
