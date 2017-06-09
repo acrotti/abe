@@ -1,0 +1,11 @@
+/*
+STRIKE-THROUGH PRICING: Increase font-size and sets a bit of margin
+on the right to take it off from the official price.
+*/
+
+
+@media (min-width: 400px) {
+.abe-strikethrough {
+    font-size: 1.2em;
+    margin-right: 2%;
+}
