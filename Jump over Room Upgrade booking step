@@ -1,0 +1,11 @@
+// If selected rate is a G-rate, then jump over
+
+<script>
+$(document).ready(function() {
+  for (var i=0; i < abe_shoppingCart.length; i++) {
+    if (abe_shoppingCart[i].rateCode.match("^G")) {
+      $('.abe-optionbox-continue-basket')[0].click();
+    }
+  }
+});
+</script>
