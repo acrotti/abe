@@ -1,5 +1,9 @@
 <script> // Resmaster 3 only
-$('#personaldetails_reviewreservation').after('<a class="button button4" id="mandatoryfields" onclick="alertmand()" style="display:none"><span><span class="arrow">&nbsp;</span>Review Reservation</span></a>');
+if (t_languageCode == "SV") {
+  $('#personaldetails_reviewreservation').after('<a class="button button4" id="mandatoryfields" onclick="alertmand()" style="display:none"><span><span class="arrow">&nbsp;</span>Granska bokning</span></a>');
+} else {
+  $('#personaldetails_reviewreservation').after('<a class="button button4" id="mandatoryfields" onclick="alertmand()" style="display:none"><span><span class="arrow">&nbsp;</span>Review Reservation</span></a>');
+}
 
 function alertmand() {
     alert("Membership Number is missing");
