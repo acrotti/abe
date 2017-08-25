@@ -1,4 +1,4 @@
-<script>
+<script> // Resmaster 3 only
 $('#personaldetails_reviewreservation').after('<a class="button button4" id="mandatoryfields" onclick="alertmand()" style="display:none"><span><span class="arrow">&nbsp;</span>Review Reservation</span></a>');
 
 function alertmand() {
