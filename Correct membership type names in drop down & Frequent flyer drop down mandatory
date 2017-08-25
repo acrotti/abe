@@ -1,0 +1,48 @@
+<script>
+$('#personaldetails_reviewreservation').after('<a class="button button4" id="mandatoryfields" onclick="alertmand()" style="display:none"><span><span class="arrow">&nbsp;</span>Review Reservation</span></a>');
+
+function alertmand() {
+    alert("Membership Number is missing");
+}
+
+$("#addition_membership_type, input[name='booking.additional_frequentFlyerMembershipNumber']").change(function () {
+
+  var membertype = $('#addition_membership_type').val();
+  var membernumber = $('input[name="booking.additional_frequentFlyerMembershipNumber"]').val();
+
+  if (membertype != "" && membernumber === "") {
+    $("#mandatoryfields").css('display', 'block');
+    $("#personaldetails_reviewreservation").css('display', 'none');
+    $("#addition_membership_type, input[name='booking.additional_frequentFlyerMembershipNumber']").attr("placeholder", "Enter FF number - mandatory")
+  } else {
+    $("#mandatoryfields").css('display', 'none');
+    $("#personaldetails_reviewreservation").css('display', 'block');
+  }
+})
+
+$(function(){
+$('#addition_membership_type-menu li a').each(function(){
+$(this).text($(this).text().replace('BTI', 'Baltic Miles').replace('GIA', 'Garuda Indonesia/ BIG').replace('QAP', 'Qatar Airways Privilege Club').replace('TAP', 'TAP Victoria').replace('AXM', 'Air Asia Big Shots').replace('AFR','Flying Blue Executive Club').replace('HAF','Hainan Airlines Fortune Wings').replace('IAC','Iceland Air Customer Club').replace('KFR','King Fisher'));
+});
+});
+</script>
+<script>
+$ (document).ready(function () {
+$("#addition_membership_type").change(function()
+{
+var x = document.getElementById("addition_membership_type").selectedIndex;
+var y = document.getElementById("addition_membership_type").options;
+var member = document.getElementsByName("booking.additional_frequentFlyerMembershipNumber")[0].value;
+if (y[x].index == "0" && member.length > 0)
+{
+document.getElementsByName("booking.additional_frequentFlyerMembershipNumber")[0].value="";
+document.getElementsByName("booking.additional_frequentFlyerMembershipNumber")[0].style.border="none";
+}
+else if (y[x].index > "0" && member == "")
+{
+document.getElementsByName("booking.additional_frequentFlyerMembershipNumber")[0].style.border=" solid #FF0000";
+document.getElementsByName("booking.additional_frequentFlyerMembershipNumber")[0].style.padding="1px 3px";
+}
+});
+});
+</script>
